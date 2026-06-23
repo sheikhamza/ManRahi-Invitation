@@ -1305,8 +1305,12 @@ document.addEventListener('DOMContentLoaded', function () {
             overlay.classList.add('reveal-active');
 
             const audio = document.getElementById('bg-audio');
+            const icon = document.getElementById('music-icon');
+
+            audio.currentTime = 44; // 44 sec se start
+
+            icon.className = 'fa-solid fa-music animate-spin';
             audio.play().catch(() => {
-                console.log("Audio autoplay restricted.");
             });
 
             overlay.addEventListener('transitionend', function handler() {
@@ -1321,6 +1325,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function toggleMusic() {
         const audio = document.getElementById('bg-audio');
         const icon = document.getElementById('music-icon');
+
         if (audio.paused) {
             audio.play();
             icon.className = 'fa-solid fa-music animate-spin';
