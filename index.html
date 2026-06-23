@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Wedding Invitation">
+    <meta property="og:description" content="Doughter of M.jawaid and Abdul Mannan wedding digital invitation.">
+    <meta property="og:image" content="https://api.imghippo.com/files/xKj7690JM.png">
+    <meta property="og:url" content="https://tabahi-food.netlify.app/invitation">
+    <meta property="og:type" content="website">
+    <title>Ivory Elegance — Premium Digital Wedding Invitation</title>
+    <!-- Tailwind CSS CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>   
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+    <style>
+        :root {
+            --primary: #6F7862;
+            --primary-dark: #59614E;
+            --background: #F8F6F1;
+            --section: #E9ECE2;
+            --accent: #B89A63;
+            --beige: #DCCCB6;
+            --border: #D7D9D1;
+            --text: #454545;
+        }
+        /* Heading */
+        .Cormorant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Script */
+        .Allura {
+            font-family: 'Allura', cursive;
+        }
+
+        .Montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Body */
+        body {
+            font-family: 'Inter', 'Montserrat', sans-serif;
+            background-color: #F8F6F1;
+            color: #2c2a27;
+            overflow-x: hidden;
+        }
+        .welcome-section {
+            background-image: url('./images/temp-1/welcome-bg.avif');
+        }
+
+        .crew-carousel{
+            width:100%;
+            max-width:1000px;
+            height:500px;
+            position:relative;
+            margin:auto;
+            perspective:1000px;
+        }
+
+        .crew-track{
+            width:100%;
+            height:100%;
+            position:relative;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .crew-card{
+            position:absolute;
+            width:280px;
+            height:390px;
+            transition:all .8s ease;
+        }
+
+        .crew-card.center{
+            transform:translateX(0) scale(1.05);
+            z-index:10;
+            opacity:1;
+        }
+
+        .crew-card.left-1{
+            transform:translateX(-110px) scale(.9);
+            z-index:8;
+            opacity:.8;
+        }
+
+        .crew-card.left-2{
+            transform:translateX(-200px) scale(.75);
+            z-index:6;
+            opacity:.4;
+        }
+
+        .crew-card.right-1{
+            transform:translateX(110px) scale(.9);
+            z-index:8;
+            opacity:.8;
+        }
+
+        .crew-card.right-2{
+            transform:translateX(200px) scale(.75);
+            z-index:6;
+            opacity:.4;
+        }
+
+        .crew-card.hidden{
+            opacity:0;
+            pointer-events:none;
+        }
+
+        .crew-arrow{
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+        }
+
+        .crew-left{
+            left:-20px;
+        }
+
+        .crew-right{
+            right:-20px;
+        }
+
+        @media(max-width:768px){
+
+            .crew-carousel{
+                height:420px;
+                padding:0 2.5rem;
+            }
+
+            .crew-card{
+                width:230px;
+                height:340px;
+            }
+
+            .crew-card.left-1{
+                transform:translateX(-80px) scale(.8);
+            }
+
+            .crew-card.right-1{
+                transform:translateX(80px) scale(.8);
+            }
+
+            .crew-card.left-2,
+            .crew-card.right-2{
+                opacity:0;
+                transform:scale(.7);
+            }
+
+            .crew-left{
+                left:0;
+            }
+
+            .crew-right{
+                right:0;
+            }
+
+        }
+
+        .countdown-ring{
+            width:9.5rem;
+            height:9.5rem;
+            flex-shrink:0;
+        }
+
+        .countdown-row{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:center;
+            gap:1rem;
+        }
+
+        @media(min-width:768px){
+            .countdown-row{
+                flex-wrap:nowrap;
+                gap:1.25rem;
+            }
+        }
+
+        @media(min-width:1280px){
+            .countdown-row{
+                gap:1.5rem;
+            }
+        }
+
+        @media(min-width:1280px) and (max-width:1535px){
+            .countdown-ring{
+                width:8.5rem;
+                height:8.5rem;
+            }
+
+            .countdown-ring .countdown-num{
+                font-size:2.75rem;
+            }
+        }
+
+        @media(max-width:640px){
+            .countdown-ring{
+                width:7rem;
+                height:7rem;
+            }
+
+            .countdown-ring .countdown-num{
+                font-size:2.5rem;
+            }
+
+            .countdown-ring .countdown-label{
+                font-size:14px;
+            }
+        }
+
+        .scratch-box{
+            width:100%;
+            max-width:400px;
+            aspect-ratio:8/5;
+        }
+
+        .save-date-card img.round-line-decor{
+            height:clamp(300px,50vw,600px);
+            width:clamp(150px,25vw,300px);
+        }
+
+        .save-date-card img.calendar-img{
+            width:100%;
+            max-width:400px;
+        }
+
+        .save-date-card img.round-line2-decor{
+            width:100%;
+            max-width:580px;
+            height:auto;
+        }
+
+        .couple-border{
+            display:none;
+        }
+
+        @media(min-width:1024px){
+            .couple-border{
+                display:block;
+            }
+        }
+
+        .crew-card .crew-card-inner{
+            padding:1.25rem;
+            display:flex;
+            flex-direction:column;
+            overflow:hidden;
+        }
+
+        .crew-card .crew-avatar{
+            width:7rem;
+            height:7rem;
+            flex-shrink:0;
+            border:5px solid #B89A63;
+        }
+
+        .crew-card .crew-info{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-top:1rem;
+        }
+
+        .crew-card .crew-phone{
+            max-width:100%;
+            justify-content:center;
+            text-align:center;
+            word-break:break-all;
+        }
+
+        @media(min-width:640px){
+            .crew-card .crew-card-inner{
+                padding:1.5rem;
+            }
+
+            .crew-card .crew-avatar{
+                width:10rem;
+                height:10rem;
+            }
+
+            .crew-card .crew-info{
+                margin-top:1.5rem;
+            }
+
+            .crew-card .crew-phone{
+                word-break:normal;
+                white-space:nowrap;
+            }
+        }
+
+        @media(max-width:768px){
+            .crew-card .crew-avatar{
+                width:5.5rem;
+                height:5.5rem;
+            }
+
+            .crew-card .crew-name{
+                font-size:1.25rem;
+            }
+
+            .crew-card .crew-role{
+                font-size:0.8125rem;
+            }
+
+            .crew-card .crew-phone{
+                font-size:0.6875rem;
+                padding:0.45rem 0.75rem;
+                max-width:calc(100% - 0.5rem);
+            }
+
+            .crew-card .crew-info{
+                margin-top:0.875rem;
+            }
+        }
+
+        @media(max-width:480px){
+            .crew-carousel{
+                height:360px;
+                padding:0 2rem;
+            }
+
+            .crew-card{
+                width:185px;
+                height:310px;
+            }
+
+            .crew-card .crew-card-inner{
+                padding:0.875rem;
+            }
+
+            .crew-card .crew-avatar{
+                width:4.5rem;
+                height:4.5rem;
+                border-width:3px;
+            }
+
+            .crew-card .crew-info{
+                margin-top:0.75rem;
+            }
+
+            .crew-card .crew-name{
+                font-size:1.125rem;
+                line-height:1.2;
+            }
+
+            .crew-card .crew-role{
+                font-size:0.75rem;
+                margin-top:0.25rem;
+            }
+
+            .crew-card .crew-phone{
+                margin-top:0.75rem;
+                padding:0.4rem 0.625rem;
+                font-size:0.625rem;
+                gap:0.25rem;
+            }
+
+            .crew-card .crew-phone i{
+                font-size:0.625rem;
+            }
+
+            .crew-card.left-1{
+                transform:translateX(-60px) scale(.78);
+            }
+
+            .crew-card.right-1{
+                transform:translateX(60px) scale(.78);
+            }
+        }
+
+
+        /* Custom Curtains / Luxury Door Reveal Animation */
+        .curtain-panel {
+            transition: transform 1.6s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .reveal-active .curtain-left {
+            transform: translateX(-100%);
+        }
+        .reveal-active .curtain-right {
+            transform: translateX(100%);
+        }
+        .reveal-active .curtain-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1.2s ease 0.4s;
+        }
+
+
+        .curtain-left,
+        .curtain-right{
+        transition:all 1.5s cubic-bezier(.77,0,.18,1);
+        }
+
+        .curtain-left.open{
+        transform:translateX(-100%);
+        }
+
+        .curtain-right.open{
+        transform:translateX(100%);
+        }
+    </style>
+</head>
+<body class="relative min-h-screen">
+    <!-- 1. PREMIUM 3D REVEAL EXPERIENCE (CURTAIN / DOOR OPENING OVERLAY) -->
+    <div id="reveal-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#59614E]/40 backdrop-blur-md">
+        <!-- Left Panel -->
+        <div class="curtain-left absolute top-0 left-0 w-1/2 h-full bg-[#59614E] flex flex-col justify-center items-end pr-6 sm:pr-14 text-right shadow-xl">
+            <div class="animate__animated animate__fadeInLeft">
+                <p class="text-[#D8BC7A] text-lg mb-3 font-script">Welcome To</p>
+                <h2 class="font-serif text-[#F8F6F1] text-3xl sm:text-5xl leading-tight">
+                    Digital
+                    <br>
+                    Invitation
+                </h2>
+                <div class="w-16 h-px bg-[#B89A63] ml-auto mt-5 opacity-70"></div>
+            </div>
+        </div>
+        <!-- Right Panel -->
+        <div class="curtain-right absolute top-0 right-0 w-1/2 h-full bg-[#6F7862] flex flex-col justify-center items-start pl-6 sm:pl-14 text-left shadow-xl">
+            <div class="animate__animated animate__fadeInRight">
+                <p class="text-[#D8BC7A] text-lg mb-3 font-script">Celebrate Love</p>
+                <h2 class="font-serif text-[#F8F6F1] text-3xl sm:text-5xl leading-tight">
+                    Wedding
+                    <br>
+                    Story
+                </h2>
+                <div class="w-16 h-px bg-[#B89A63] mt-5 opacity-70"></div>
+            </div>
+        </div>
+        <!-- Center Logo Button -->
+        <div id="reveal-btn-container" class="absolute z-[60]">
+            <button onclick="openInvitation()" class="group relative w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/10 backdrop-blur-xl border border-[#B89A63]/30 shadow-[0_0_40px_rgba(184,154,99,0.3)] hover:scale-110 transition-all duration-700">
+                <!-- inner ring -->
+                <div class="absolute inset-2 rounded-full border border-[#B89A63]/20"></div>
+                <div class="flex flex-col items-center justify-center h-full">
+                    <img src="./images/temp-1/logo-z.png" alt="logo"
+                    class="w-14 sm:w-20 opacity-90 group-hover:scale-110 transition duration-500">
+                    <p class="mt-3 text-[#F8F6F1]  text-lg">TAP</p> 
+                </div>
+            </button>
+            <p class="text-center mt-5 text-[#F8F6F1] tracking-[0.3em] uppercase text-xs">
+                Tap to Open
+            </p>
+        </div>
+    </div>
+
+    <!-- BACKGROUND MUSIC PLAYER CONTROLLER -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button id="music-toggle" onclick="toggleMusic()" class="bg-[#1e2421]/90 text-[#c5a880] border border-[#c5a880] p-4 rounded-full shadow-2xl hover:bg-[#c5a880] hover:text-[#1e2421] transition-all duration-300 flex items-center justify-center w-12 h-12 focus:outline-none cursor-pointer">
+            <i id="music-icon" class="fa-solid fa-music"></i>
+        </button>
+        <!-- Audio element with premium instrumental theme -->
+        <audio id="bg-audio" loop preload="auto">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <main>
+        <!-- Welcome Section -->
+        <section class="lg:min-h-screen bg-cover bg-center flex items-center justify-center welcome-section px-4 sm:px-6 overflow-hidden">
+
+            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 left-0 w-1/2 pointer-events-none" alt="Top Flower Image">
+            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 right-0 w-1/2 pointer-events-none" alt="Top Flower Image">
+
+            <div class="text-center max-w-3xl mx-auto py-10 mt-5 sm:mt-24 md:mt-30 relative z-10">
+
+                <p class="text-[#B89A63] text-xl sm:text-2xl md:text-3xl tracking-[2px] Allura">
+                    The Wedding Of
+                </p>
+
+                <h1 class="text-[#59614E] text-3xl sm:text-4xl md:text-6xl Cormorant font-bold mt-3 leading-[0.9]">
+                    D/o Muhammad Jawaid <br>
+                    <span class="text-[#B89A63] font-semibold">
+                        &
+                    </span><br>
+                    ABDUL MANNAN
+                </h1>
+
+                <p class="text-[#6F7862] text-sm sm:text-base md:text-lg Inter leading-tight font-medium mt-6">
+                    Two Hearts, One Journey, Endless Love <br>
+                    Welcome to our wedding celebration <br>
+                    Scroll down to witness our beautiful story
+                </p>
+
+                <div class="mt-8 animate-bounce">
+                    <i class="fa-solid fa-angles-down text-[#B89A63] text-2xl md:text-3xl"></i>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Date Reveal Section -->
+        <section class="bg-[#F8F6F1] date-reveal-section px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+            <div class="max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-16 2xl:gap-20">
+                <!-- Left Side -->
+                <div class="w-full xl:w-1/2 text-center">
+                    <h4 class="text-[#59614E] text-2xl sm:text-3xl lg:text-4xl Cormorant font-bold">
+                        A Special Date Awaits
+                    </h4>
+                    <img src="./images/temp-1/heading-leave.png" class="mx-auto -mt-2 mb-5 w-40 sm:w-50 h-10 sm:h-14">
+                    <div class="relative scratch-box mx-auto bg-stone-50 rounded-lg border border-dashed border-[#c5a880] flex items-center justify-center shadow-inner overflow-hidden">
+                        <div class="text-center p-4">
+                            <p class="text-[#6F7862] font-bold uppercase tracking-wider text-xs">
+                                The Big Day
+                            </p>
+                            <p class="text-[#6F7862] font-bold uppercase tracking-[3px] text-md mt-2 Inter">
+                                You're Invited
+                            </p>
+                            <p id="wedding-date" class="text-xl sm:text-2xl lg:text-3xl font-bold text-[#B89A63] mt-1">
+                                AUGUST 21, 2026
+                            </p>
+                            <p class="text-lg text-[#6F7862] mt-1">
+                                Friday
+                            </p>
+                        </div>
+                        <canvas id="scratch-canvas" class="absolute inset-0 rounded-lg z-10"></canvas>
+                    </div>
+                    <div class="countdown-row mt-6 mx-auto">
+
+                        <div class="relative countdown-ring bg-[#E9ECE2] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#84b218] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -top-8 sm:-top-10 -left-10 sm:-left-15 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#59614E] Allura" id="days">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#6F7862]">Days</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative countdown-ring bg-[#E9ECE2] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#84b218] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -bottom-8 sm:-bottom-10 -left-10 sm:-left-15 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#59614E] Allura" id="hours">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#6F7862]">Hours</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative countdown-ring bg-[#E9ECE2] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#84b218] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -top-4 sm:-top-5 -left-12 sm:-left-18 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#59614E] Allura" id="minutes">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#6F7862]">Mins</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative countdown-ring bg-[#E9ECE2] rounded-full shrink-0">
+                            <div class="relative countdown-ring flex items-center justify-center rounded-full border-2 border-[#84b218] mt-2 sm:mt-3">
+                                <img src="./images/temp-1/bunch.png" class="absolute -bottom-8 sm:-bottom-10 -left-10 sm:-left-15 w-24 sm:w-35 rotate-[-35deg] pointer-events-none">
+                                <p class="mb-4 sm:mb-6 p-0 leading-tight">
+                                    <span class="countdown-num text-4xl sm:text-5xl lg:text-6xl text-[#59614E] Allura" id="seconds">00</span> <br> 
+                                    <span class="countdown-label text-sm sm:text-[18px] font-bold text-[#6F7862]">Secs</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Right Side -->
+                <div id="save-date-card" class="save-date-card relative hidden opacity-0 transition-all duration-700 w-full max-w-lg text-center pt-8 lg:pt-12 mx-auto">
+                    <img src="./images/temp-1/round-line2.png" class="round-line2-decor mx-auto lg:-mt-20 rotate-180">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#59614E] Allura">
+                        MANRAHI
+                    </h1>
+                    <h4 class="text-xl sm:text-2xl lg:text-3xl my-2 text-[#59614E] Inter">
+                        AUGUST
+                    </h4>
+                    <img src="./images/temp-1/calendar.png" class="calendar-img mx-auto">
+                    <div class="relative z-10 mt-6">
+                        <a id="save-date-btn" href="#" target="_blank" class="inline-block px-6 py-3 bg-[#59614E] text-white rounded-full cursor-pointer">
+                            Save The Date
+                        </a>
+                    </div>
+                    <img src="./images/temp-1/round-line2.png" class="round-line2-decor mx-auto -mt-4 sm:-mt-8">
+                </div>
+            </div>
+        </section>
+
+        <!-- Couple Section -->
+        <section class="relative min-h-screen lg:h-[100vh] bg-[#E9ECE2] couple-section flex items-center justify-center py-12 sm:py-16 overflow-hidden">
+
+            <!-- Left Border -->
+            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute -left-220 top-0 h-full w-auto rotate-90 pointer-events-none">
+
+            <!-- Right Border -->
+            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute -right-220 top-0 h-full w-auto -rotate-90 pointer-events-none">
+
+            <!-- Content -->
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-25 px-4 sm:px-6">
+                <div class="girl w-full max-w-[380px] text-center">
+                    <div class="rounded-full border border-[#59614E] w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-90 lg:h-90 flex items-center justify-center mx-auto">
+                        <div class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 overflow-hidden">
+                            <img
+                                src="https://i.pinimg.com/736x/53/18/87/5318872b91dc47790e50bc472cc3e42a.jpg"
+                                class="w-full h-full object-cover object-[top_center]">
+                        </div>
+                    </div>
+                    <h4 class="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#59614E] mt-5 Inter">D/o M.Jawaid</h4>
+                    <p class="text-[#6F7862] Inter text-center font-semibold mt-3 text-sm sm:text-base">
+                        <span>The daughter of</span> <br>
+                        <span class="font-semibold text-[#59614E]">Mr. & Mrs. MUHAMMAD JAWAID</span>
+                    </p>
+                    <a href="https://www.instagram.com/rahinaz7/" target="_blank" class="inline-block mt-5 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-3xl sm:text-4xl lg:text-5xl text-[#59614E]"></i>
+                    </a>
+                </div>
+                <div class="boy w-full max-w-[380px] text-center">
+                    <div class="rounded-full border border-[#59614E] w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-90 lg:h-90 flex items-center justify-center mx-auto">
+                        <div class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 overflow-hidden">
+                            <img
+                                src="https://scontent.cdninstagram.com/v/t51.82787-19/620870162_18354670030203306_5663536138522621419_n.jpg?_nc_cat=108&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=Ve_fLCVLcKYQ7kNvwGRGcjQ&_nc_oc=AdqhoCFTakzKZM0LvfTfX-LrVpA_gstTIxDyw8w6lt_f72nBGSX0_uFopg3OaGxWTAM&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=zuVXZnek6FnNPixjss9X6A&_nc_ss=7b6a8&oh=00_Af-mhGu1ZdjWevpn4FHjCO_7qCjuKkpau1yqNAqvCW4FBg&oe=6A3AF7BA"
+                                class="w-full h-full object-cover object-[top_center]">
+                        </div>
+                    </div>
+                    <h4 class="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#59614E] mt-5 Inter">ABDUL MANNAN</h4>
+                    <p class="text-[#6F7862] Inter text-center font-semibold mt-3 text-sm sm:text-base">
+                        <span>The son of</span> <br>
+                        <span class="font-semibold text-[#59614E]">Mr. & Mrs. MUJEEB KHAN</span>
+                    </p>
+                    <a href="https://www.instagram.com/abdulmannaankhan/" target="_blank" class="inline-block mt-5 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-3xl sm:text-4xl lg:text-5xl text-[#59614E]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Wedding Info Section -->
+        <section class="relative bg-[#F8F6F1] wedding-info-section py-12 sm:py-16 text-center overflow-hidden px-4 sm:px-6">
+            <div class="relative flex items-center justify-center flex-col mb-8 sm:mb-10">
+                <h4 class="text-[#B89A63] text-3xl sm:text-4xl lg:text-5xl Allura">When & Where</h4>
+                <!-- Small Divider -->
+                <div class="flex justify-center items-center gap-3">
+
+                    <div class="h-[1px] w-20 bg-[#B89A63]"></div>
+
+                    <i class="fa-solid fa-heart text-[#B89A63]"></i>
+
+                    <div class="h-[1px] w-20 bg-[#B89A63]"></div>
+
+                </div>
+                <h4 class="text-[#59614E] text-2xl sm:text-3xl lg:text-5xl Cormorant font-bold">Our Wedding Program</h4>
+                <img src="./images/temp-1/heading-leave.png" class="mx-auto -mt-2 mb-5 w-40 sm:w-50 h-10 sm:h-14">
+            </div>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+                <!-- Left Wedding Details -->
+                <div class="bg-[#E9ECE2] rounded-[20px] sm:rounded-[30px] p-6 sm:p-8 lg:p-10 text-left">
+                    <p class="text-[#B89A63] uppercase tracking-[4px] text-sm font-semibold mb-3">
+                        Wedding Details
+                    </p>
+
+                    <!-- Date -->
+                    <div class="flex items-center gap-4 border-b border-[#d4d4d4] pb-5 mb-5">
+                        <div class="bg-[#59614E] h-14 w-14 rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-[#B89A63] text-sm uppercase tracking-widest">
+                                Wedding Date
+                            </p>
+                            <h4 class="text-[#59614E] font-semibold text-base sm:text-lg lg:text-xl">
+                                Friday, August 21, 2026
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="flex items-center gap-4 border-b border-[#d4d4d4] pb-5 mb-5">
+                        <div class="bg-[#59614E] h-14 w-14 rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-[#B89A63] text-sm uppercase tracking-widest">
+                                Reception Time
+                            </p>
+
+                            <h4 class="text-[#59614E] font-semibold text-base sm:text-lg lg:text-xl">
+                                8:00 PM
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- Venue -->
+                    <div class="flex items-start gap-4">
+
+                        <div class="bg-[#59614E] min-h-14 min-w-14 rounded-full flex items-center justify-center text-white">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <p class="text-[#B89A63] text-sm uppercase tracking-widest">
+                                Wedding Venue
+                            </p>
+
+                            <h4 class="text-[#59614E] font-semibold text-base sm:text-lg lg:text-xl">
+                                ZEEBI SAMA BANQUET
+                            </h4>
+
+                            <p class="text-[#6F7862] mt-2 leading-relaxed text-sm sm:text-base">
+                                Nazimabad No. 4 D 15/5 Nazimabad, Karachi, Pakistan.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Button -->
+                    <a href="https://www.google.com/maps/place/Zebi+Sama+Banquet/@24.9106287,67.0353113,17z"
+                    target="_blank"
+                    class="inline-flex items-center gap-3 mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-[#59614E] text-white rounded-full hover:scale-105 transition duration-300 text-sm sm:text-base">
+
+                        <i class="fa-solid fa-location-dot"></i>
+                        Open In Google Maps
+
+                    </a>
+
+                </div>
+
+
+                <!-- Right Map -->
+                <div class="relative rounded-[20px] sm:rounded-[30px] overflow-hidden shadow-xl border-4 border-[#E9ECE2] h-[280px] sm:h-[380px] lg:h-[500px]">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.6291401884105!2d67.0353113!3d24.9106287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fa4c7f88717%3A0x96f8433dd35db0ce!2sZebi%20Sama%20Banquet!5e0!3m2!1sen!2s!4v1781024919094!5m2!1sen!2s"
+                        class="w-full h-full"
+                        loading="lazy">
+                    </iframe>
+
+                    <!-- Floating Date Badge -->
+                    <div class="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 bg-[#F8F6F1] px-4 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg border border-[#DCCCB6] w-[90%] max-w-sm">
+
+                        <p class="text-[#B89A63] text-xs tracking-[3px] uppercase">
+                            Save The Date
+                        </p>
+
+                        <h4 class="text-[#59614E] font-bold text-lg">
+                            21 • AUGUST • 2026
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="bg-[#F8F6F1] py-12 sm:py-16 lg:py-20 overflow-hidden px-4 sm:px-6">
+            <!-- Heading -->
+            <div class="text-center mb-6 sm:mb-8">
+                <h4 class="text-[#B89A63] text-3xl sm:text-4xl lg:text-5xl Allura">RSVP</h4>
+                <!-- Small Divider -->
+                <div class="flex justify-center items-center gap-3">
+
+                    <div class="h-[1px] w-20 bg-[#B89A63]"></div>
+
+                    <i class="fa-solid fa-heart text-[#B89A63]"></i>
+
+                    <div class="h-[1px] w-20 bg-[#B89A63]"></div>
+
+                </div>
+                <h2 class="text-[#59614E] text-2xl sm:text-3xl lg:text-5xl Cormorant font-bold mt-2">Contact Family</h2>
+                <img src="./images/temp-1/heading-leave.png" class="mx-auto w-32 sm:w-40 h-10 sm:h-12">
+            </div>
+
+            <div class="crew-carousel mx-auto relative max-w-full">
+
+                <!-- Left -->
+                <button
+                    class="crew-arrow crew-left z-50 bg-[#59614E] text-white w-12 h-12 rounded-full shadow-xl hover:scale-110 transition"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="crew-track"></div>
+                <!-- Right -->
+                <button
+                    class="crew-arrow crew-right z-50 bg-[#59614E] text-white w-12 h-12 rounded-full shadow-xl hover:scale-110 transition"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Footer Section -->
+        <section class="relative bg-[#59614E] overflow-hidden py-12 sm:py-10 text-center px-4">
+            <!-- Decorative Top Flowers -->
+            <img src="./images/temp-1/top.png" class="pointer-events-none absolute -top-20 left-0 w-[250px] opacity-25 rotate-180">
+            <img src="./images/temp-1/top.png" class="pointer-events-none absolute -top-20 right-0 w-[250px] opacity-25">
+            <div class="relative z-10 max-w-4xl mx-auto px-4">
+                <img src="./images/temp-1/logo.png" class="mx-auto mb-5 h-16 sm:h-20 w-auto">
+                <!-- Thank You -->
+                <p class="text-[#DCCCB6] text-lg Allura">
+                    Thank You
+                </p>
+                <h2 class="text-white text-2xl sm:text-3xl lg:text-4xl Cormorant font-bold mt-2 leading-tight">
+                    Abdul Mannan
+                    <span class="text-[#B89A63]">&</span>
+                    D/o M.Jawaid
+                </h2>
+                <!-- Footer Bottom -->
+                <div class=" border-t border-[#B89A63]/30 pt-6">
+                    <div class="text-center space-y-3">
+                        <p class="text-[#F1E5D1] text-lg">
+                            Made with <span class="text-[#B89A63]">❤</span> by
+                            <span class="text-[#B89A63] font-bold">
+                                ZaroInvite
+                            </span>
+                            Create your invitation
+                        </p>
+                        <div class="lg:flex items-center justify-center gap-6
+                        text-[#DCCCB6] text-lg">
+                            <div>
+                                <a href="tel:+923001234567"
+                                class="hover:text-[#B89A63] transition">
+                                    <i class="fa-solid fa-phone text-[20px] mr-2"></i>
+                                    +92 312 3743909
+                                </a>
+                            </div>
+                            <span class="opacity-40 hidden lg:block">|</span>
+                            <div>
+                                <a href="https://instagram.com/zaroinvite"
+                                target="_blank"
+                                class="hover:text-[#B89A63] transition">
+                                    <i class="fa-brands fa-instagram mr-2"></i>
+                                    @zaroinvite
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<!-- Scratch -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<!-- slider -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const crewMembers = [
+        {
+            name:"Hamza Sheikh",
+            role:"Brother",
+            phone:"+92 312 3743909",
+            image:"./images/temp-1/hamza.png"
+        },
+        {
+            name:"Ahmed Sheikh",
+            role:"Brother",
+            phone:"+92 370 5108936",
+            image:"https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=900"
+        },
+        {
+            name:"Muhammad Jawaid",
+            role:"Father of Bride",
+            phone:"+92 345 2291358",
+            image:"https://images.unsplash.com/photo-1500648767791-00dcc994a43d?w=900"
+        },
+        {
+            name:"Abdul Qadeer",
+            role:"Brother",
+            phone:"+92 317 0281540",
+            image:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900"
+        }
+    ];
+
+    const track = document.querySelector(".crew-track");
+    const leftBtn = document.querySelector(".crew-left");
+    const rightBtn = document.querySelector(".crew-right");
+    const carousel = document.querySelector(".crew-carousel");
+
+    /* Dynamic cards create */
+
+    track.innerHTML = crewMembers.map((member,i)=>`
+
+        <div class="crew-card" data-index="${i}">
+
+            <div class="bg-[#E9ECE2] rounded-[20px] sm:rounded-[30px] crew-card-inner h-full border border-[#D7D9D1]">
+
+                <div class="rounded-full crew-avatar overflow-hidden mx-auto border-[5px] border-[#B89A63]">
+
+                    <img
+                        src="${member.image}"
+                        class="w-full h-full object-cover"
+                    >
+
+                </div>
+
+                <div class="crew-info text-center">
+
+                    <h3 class="crew-name text-[#59614E] text-xl sm:text-2xl lg:text-3xl Cormorant font-bold">
+                        ${member.name}
+                    </h3>
+
+                    <p class="crew-role text-[#6F7862] mt-2">
+                        ${member.role}
+                    </p>
+
+                    <a
+                        href="tel:${member.phone.replace(/\s/g,'')}"
+                        class="crew-phone inline-flex mt-4 sm:mt-5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-[#59614E] text-white gap-2 items-center text-sm sm:text-base"
+                    >
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        ${member.phone}
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `).join("");
+
+
+    const crewCards = document.querySelectorAll(".crew-card");
+
+    let crewIndex = 0;
+    let animating = false;
+
+    function updateCrewCarousel(index){
+
+        if(animating) return;
+
+        animating = true;
+
+        crewIndex =
+        (index + crewCards.length)
+        %
+        crewCards.length;
+
+
+        crewCards.forEach((card,i)=>{
+
+            card.classList.remove(
+                "center",
+                "left-1",
+                "left-2",
+                "right-1",
+                "right-2",
+                "hidden"
+            );
+
+            let offset =
+            (i - crewIndex + crewCards.length)
+            %
+            crewCards.length;
+
+
+            if(offset===0){
+
+                card.classList.add("center");
+
+            }
+            else if(offset===1){
+
+                card.classList.add("right-1");
+
+            }
+            else if(offset===2){
+
+                card.classList.add("right-2");
+
+            }
+            else if(offset===crewCards.length-1){
+
+                card.classList.add("left-1");
+
+            }
+            else if(offset===crewCards.length-2){
+
+                card.classList.add("left-2");
+
+            }
+            else{
+
+                card.classList.add("hidden");
+
+            }
+
+        });
+
+        setTimeout(()=>{
+
+            animating=false;
+
+        },800);
+
+    }
+
+
+    /* buttons */
+
+    rightBtn.addEventListener(
+        "click",
+        ()=>updateCrewCarousel(crewIndex+1)
+    );
+
+    leftBtn.addEventListener(
+        "click",
+        ()=>updateCrewCarousel(crewIndex-1)
+    );
+
+
+    /* click */
+
+    crewCards.forEach((card,i)=>{
+
+        card.addEventListener(
+            "click",
+            ()=>updateCrewCarousel(i)
+        );
+
+    });
+
+
+    /* keyboard */
+
+    document.addEventListener("keydown",(e)=>{
+
+        if(e.key==="ArrowRight"){
+            updateCrewCarousel(crewIndex+1);
+        }
+
+        if(e.key==="ArrowLeft"){
+            updateCrewCarousel(crewIndex-1);
+        }
+
+    });
+
+
+    /* swipe */
+
+    let touchStartX=0;
+    let touchEndX=0;
+
+    carousel.addEventListener("touchstart",(e)=>{
+
+        touchStartX =
+        e.changedTouches[0].screenX;
+
+    });
+
+    carousel.addEventListener("touchend",(e)=>{
+
+        touchEndX =
+        e.changedTouches[0].screenX;
+
+        let diff =
+        touchStartX-touchEndX;
+
+        if(Math.abs(diff)>50){
+
+            if(diff>0){
+
+                updateCrewCarousel(
+                    crewIndex+1
+                );
+
+            }else{
+
+                updateCrewCarousel(
+                    crewIndex-1
+                );
+
+            }
+
+        }
+
+    });
+
+
+    updateCrewCarousel(0);
+
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const canvas = document.getElementById('scratch-canvas');
+    const ctx = canvas.getContext('2d');
+
+    const container = canvas.parentElement;
+
+    let isDrawing = false;
+    let revealed = false;
+
+    function resizeCanvas() {
+        canvas.width = container.offsetWidth;
+        canvas.height = container.offsetHeight;
+
+        if (!revealed) {
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.fillStyle = '#B89A63';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(
+                '✨ Scratch To Reveal ✨',
+                canvas.width / 2,
+                canvas.height / 2
+            );
+        }
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Google Calendar Link
+    const startDate = "20260821T190000";
+    const endDate = "20260821T230000";
+
+    const calendarUrl =
+        `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+        `&text=Abdul Mannan and Rahima Jawaid Wedding` +
+        `&dates=${startDate}/${endDate}` +
+        `&details=Join us for our wedding celebration`;
+
+    const saveBtn = document.getElementById('save-date-btn');
+
+    if (saveBtn) {
+        saveBtn.href = calendarUrl;
+    }
+
+    function getPosition(e) {
+        const rect = canvas.getBoundingClientRect();
+        if (e.touches && e.touches.length > 0) {
+            return {
+                x: e.touches[0].clientX - rect.left,
+                y: e.touches[0].clientY - rect.top
+            };
+        }
+
+        return {
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        };
+    }
+
+    function scratch(e) {
+        if (!isDrawing || revealed) return;
+
+        const pos = getPosition(e);
+        ctx.globalCompositeOperation = 'destination-out';
+
+        ctx.beginPath();
+        ctx.arc(pos.x, pos.y, 30, 0, Math.PI * 2);
+        ctx.fill();
+
+        checkReveal();
+    }
+
+    function checkReveal() {
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
+        let transparentPixels = 0;
+
+        for (let i = 3; i < imageData.data.length; i += 4) {
+            if (imageData.data[i] === 0) {
+                transparentPixels++;
+            }
+        }
+
+        const percentage = transparentPixels / (canvas.width * canvas.height);
+
+        // 70% Scratch Complete
+        if (percentage > 0.5 && !revealed) {
+            revealed = true;
+            // Fully Clear Canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Fade Out
+            canvas.style.transition = 'opacity 0.8s';
+            canvas.style.opacity = '0';
+
+            // Mobile Vibration
+            if (navigator.vibrate) {
+                navigator.vibrate(200);
+            }
+
+            // Confetti
+            confetti({
+                particleCount: 250,
+                spread: 180,
+                origin: {
+                    y: 0.6
+                }
+            });
+
+            // Extra Burst
+            setTimeout(() => {
+                confetti({
+                    particleCount: 150,
+                    spread: 120,
+                    origin: {
+                        x: 0.2,
+                        y: 0.5
+                    }
+                });
+
+                confetti({
+                    particleCount: 150,
+                    spread: 120,
+                    origin: {
+                        x: 0.8,
+                        y: 0.5
+                    }
+                });
+            }, 300);
+
+            // Reveal Calendar Card
+            setTimeout(() => {
+
+                canvas.style.display = 'none';
+
+                const saveCard = document.getElementById('save-date-card');
+
+                if (saveCard) {
+
+                    saveCard.classList.remove('hidden');
+
+                    setTimeout(() => {
+                        saveCard.classList.remove('opacity-0');
+                    }, 50);
+                }
+
+            }, 800);
+        }
+    }
+
+    /* Desktop Events */
+    canvas.addEventListener('mousedown', () => {isDrawing = true;});
+    canvas.addEventListener('mouseup', () => {isDrawing = false;});
+    canvas.addEventListener('mouseleave', () => {isDrawing = false;});
+    canvas.addEventListener('mousemove', scratch);
+
+    /* Mobile Events */
+    canvas.addEventListener('touchstart', () => {isDrawing = true;});
+    canvas.addEventListener('touchend', () => {isDrawing = false;});
+    canvas.addEventListener('touchmove',function (e) {
+            e.preventDefault();
+            scratch(e);
+        },{
+            passive: false
+        }
+    );
+
+
+    // --- 5. LIVE COUNTDOWN SCHEDULER ENGINE ---
+    // Setting event target deadline date timestamp values loop 
+    // const targetDate = new Date('August 21, 2026 19:00:00').getTime();
+    const targetDate = new Date(document.getElementById('wedding-date').innerText).getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference < 0) {
+            document.getElementById('days').innerText = "00";
+            return;
+        }
+
+        const d = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+        document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+        document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+        document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+});
+</script>
+<script>
+    // --- 1. REVEAL / CURTAIN OPEN SYSTEM LOGIC ---
+    function openInvitation() {
+        const overlay = document.getElementById('reveal-overlay');
+        const btnContainer = document.getElementById('reveal-btn-container');
+
+        btnContainer.style.transform = 'scale(0)';
+
+        setTimeout(() => {
+
+            overlay.classList.add('reveal-active');
+
+            const audio = document.getElementById('bg-audio');
+            audio.play().catch(() => {
+                console.log("Audio autoplay restricted.");
+            });
+
+            overlay.addEventListener('transitionend', function handler() {
+                overlay.classList.remove('fixed');
+                overlay.removeEventListener('transitionend', handler);
+            });
+
+        }, 900);
+    }
+
+    // --- 2. AUDIO BACKGROUND TOGGLE MANAGEMENT ---
+    function toggleMusic() {
+        const audio = document.getElementById('bg-audio');
+        const icon = document.getElementById('music-icon');
+        if (audio.paused) {
+            audio.play();
+            icon.className = 'fa-solid fa-music animate-spin';
+        } else {
+            audio.pause();
+            icon.className = 'fa-solid fa-volume-xmark';
+        }
+    }
+</script>
+</body>
+</html>
