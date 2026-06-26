@@ -19,68 +19,69 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <!-- Css -->
     <link rel="stylesheet" href="style.css">
-</head>
-<body class="relative min-h-screen">
-    <!-- 1. PREMIUM 3D REVEAL EXPERIENCE (CURTAIN / DOOR OPENING OVERLAY) -->
-    <div id="reveal-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#59614E]/40 backdrop-blur-md">
-        <!-- Left Panel -->
-        <div class="curtain-left absolute top-0 left-0 w-1/2 h-full bg-[#59614E] flex flex-col justify-center items-end pr-6 sm:pr-14 text-right shadow-xl">
-            <div class="animate__animated animate__fadeInLeft">
-                <p class="text-[#D8BC7A] text-lg mb-3 font-script">Welcome To</p>
-                <h2 class="font-serif text-[#F8F6F1] text-3xl sm:text-5xl leading-tight">
-                    Digital
-                    <br>
-                    Invitation
-                </h2>
-                <div class="w-16 h-px bg-[#B89A63] ml-auto mt-5 opacity-70"></div>
-            </div>
-        </div>
-        <!-- Right Panel -->
-        <div class="curtain-right absolute top-0 right-0 w-1/2 h-full bg-[#6F7862] flex flex-col justify-center items-start pl-6 sm:pl-14 text-left shadow-xl">
-            <div class="animate__animated animate__fadeInRight">
-                <p class="text-[#D8BC7A] text-lg mb-3 font-script">Celebrate Love</p>
-                <h2 class="font-serif text-[#F8F6F1] text-3xl sm:text-5xl leading-tight">
-                    Wedding
-                    <br>
-                    Story
-                </h2>
-                <div class="w-16 h-px bg-[#B89A63] mt-5 opacity-70"></div>
-            </div>
-        </div>
-        <!-- Center Logo Button -->
-        <div id="reveal-btn-container" class="absolute z-[60]">
-            <button onclick="openInvitation()" class="group relative w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/10 backdrop-blur-xl border border-[#B89A63]/30 shadow-[0_0_40px_rgba(184,154,99,0.3)] hover:scale-110 transition-all duration-700">
-                <!-- inner ring -->
-                <div class="absolute inset-2 rounded-full border border-[#B89A63]/20"></div>
-                <div class="flex flex-col items-center justify-center h-full">
-                    <img src="./images/temp-1/logo-z.png" alt="logo"
-                    class="w-14 sm:w-20 opacity-90 group-hover:scale-110 transition duration-500">
-                    <p class="mt-3 text-[#F8F6F1]  text-lg">TAP</p> 
-                </div>
-            </button>
-            <p class="text-center mt-5 text-[#F8F6F1] tracking-[0.3em] uppercase text-xs">
-                Tap to Open
-            </p>
-        </div>
-    </div>
 
-    <!-- BACKGROUND MUSIC PLAYER CONTROLLER -->
-    <div class="fixed bottom-6 right-6 z-40">
-        <button id="music-toggle" onclick="toggleMusic()" class="bg-[#1e2421]/90 text-[#c5a880] border border-[#c5a880] p-4 rounded-full shadow-2xl hover:bg-[#c5a880] hover:text-[#1e2421] transition-all duration-300 flex items-center justify-center w-12 h-12 focus:outline-none cursor-pointer">
-            <i id="music-icon" class="fa-solid fa-music"></i>
-        </button>
-        <!-- Audio element with premium instrumental theme -->
-        <audio id="bg-audio" loop preload="auto">
-            <source src="./audio.mp3" type="audio/mpeg">
-        </audio>
-    </div>
+    </head>
+    <body class="relative min-h-screen">
+        <!-- 1. PREMIUM 3D REVEAL EXPERIENCE (CURTAIN / DOOR OPENING OVERLAY) -->
+        <div id="reveal-overlay" class="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#59614E]/40 backdrop-blur-md">
+            <!-- Left Panel -->
+            <div class="curtain-left absolute top-0 left-0 w-1/2 h-full bg-[#59614E] flex flex-col justify-center items-end pr-6 sm:pr-14 text-right shadow-xl">
+                <div class="animate__animated animate__fadeInLeft">
+                    <p class="text-[#D8BC7A] text-lg mb-3 font-script">Welcome To</p>
+                    <h2 class="font-serif text-[#F8F6F1] text-3xl sm:text-5xl leading-tight">
+                        Digital
+                        <br>
+                        Invitation
+                    </h2>
+                    <div class="w-16 h-px bg-[#B89A63] ml-auto mt-5 opacity-70"></div>
+                </div>
+            </div>
+            <!-- Right Panel -->
+            <div class="curtain-right absolute top-0 right-0 w-1/2 h-full bg-[#6F7862] flex flex-col justify-center items-start pl-6 sm:pl-14 text-left shadow-xl">
+                <div class="animate__animated animate__fadeInRight">
+                    <p class="text-[#D8BC7A] text-lg mb-3 font-script">Celebrate Love</p>
+                    <h2 class="font-serif text-[#F8F6F1] text-3xl sm:text-5xl leading-tight">
+                        Wedding
+                        <br>
+                        Story
+                    </h2>
+                    <div class="w-16 h-px bg-[#B89A63] mt-5 opacity-70"></div>
+                </div>
+            </div>
+            <!-- Center Logo Button -->
+            <div id="reveal-btn-container" class="absolute z-[60]">
+                <button onclick="openInvitation()" class="group relative w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/10 backdrop-blur-xl border border-[#B89A63]/30 shadow-[0_0_40px_rgba(184,154,99,0.3)] hover:scale-110 transition-all duration-700">
+                    <!-- inner ring -->
+                    <div class="absolute inset-2 rounded-full border border-[#B89A63]/20"></div>
+                    <div class="flex flex-col items-center justify-center h-full">
+                        <img src="./images/temp-1/logo-z.png" alt="logo"
+                        class="w-14 sm:w-20 opacity-90 group-hover:scale-110 transition duration-500">
+                        <p class="mt-3 text-[#F8F6F1]  text-lg">TAP</p> 
+                    </div>
+                </button>
+                <p class="text-center mt-5 text-[#F8F6F1] tracking-[0.3em] uppercase text-xs">
+                    Tap to Open
+                </p>
+            </div>
+        </div>
+
+        <!-- BACKGROUND MUSIC PLAYER CONTROLLER -->
+        <div class="fixed bottom-6 right-6 z-40">
+            <button id="music-toggle" onclick="toggleMusic()" class="bg-[#1e2421]/90 text-[#c5a880] border border-[#c5a880] p-4 rounded-full shadow-2xl hover:bg-[#c5a880] hover:text-[#1e2421] transition-all duration-300 flex items-center justify-center w-12 h-12 focus:outline-none cursor-pointer">
+                <i id="music-icon" class="fa-solid fa-music"></i>
+            </button>
+            <!-- Audio element with premium instrumental theme -->
+            <audio id="bg-audio" loop preload="auto">
+                <source src="./audio.mp3" type="audio/mpeg">
+            </audio>
+        </div>
 
     <main>
         <!-- Welcome Section -->
-        <section class="lg:min-h-screen bg-cover bg-center flex items-center justify-center welcome-section px-4 sm:px-6 overflow-hidden">
+        <section class="lg:min-h-screen bg-cover bg-center flex items-center justify-center welcome-section px-4 sm:px-6 sm:overflow-x-hidden overflow-x-hidden">
 
-            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 left-0 w-1/2 pointer-events-none" alt="Top Flower Image">
-            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 right-0 w-1/2 pointer-events-none" alt="Top Flower Image">
+            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 lg:-left-5 left-0 w-[52%] pointer-events-none flower-left" alt="Top Flower Image">
+            <img src="./images/temp-1/top.png" class="absolute -top-5 sm:-top-24 md:-top-32 lg:-right-5 right-0 w-[52%] pointer-events-nonez flower-right" alt="Top Flower Image">
 
             <div class="text-center max-w-3xl mx-auto py-10 mt-5 sm:mt-24 md:mt-30 relative z-10">
 
@@ -200,10 +201,10 @@
         <section class="relative min-h-screen lg:h-[100vh] bg-[#E9ECE2] couple-section flex items-center justify-center py-12 sm:py-16 overflow-hidden">
 
             <!-- Left Border -->
-            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute -left-220 top-0 h-full w-auto rotate-90 pointer-events-none">
+            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute lg:-left-220 top-0 h-full w-auto rotate-90 pointer-events-none">
 
             <!-- Right Border -->
-            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute -right-220 top-0 h-full w-auto -rotate-90 pointer-events-none">
+            <img src="./images/temp-1/border.png" alt="" class="couple-border absolute lg:-right-220 top-0 h-full w-auto -rotate-90 pointer-events-none">
 
             <!-- Content -->
             <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-25 px-4 sm:px-6">
